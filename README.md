@@ -28,3 +28,59 @@ springboot
 H2
 
 Swagger
+
+http://localhost:8080/api/home
+
+postman request 'http://localhost:8080/api/home' \
+  --header 'X-API-KEY: ABC123-PERM' \
+  --body '' \
+  --auth-apikey-key 'X-API-KEY' \
+  --auth-apikey-value 'ABC123-PERM' \
+  --auth-apikey-in 'header'
+  
+http://localhost:8080/api/parking-stays/vehicles/check-in
+
+postman request POST 'http://localhost:8080/api/parking-stays/vehicles/check-in' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-KEY: ABC123-PERM' \
+  --body '{
+    "licensePlate": "anni8787",
+    "chargerRequired": true
+}' \
+  --auth-apikey-key 'X-API-KEY' \
+  --auth-apikey-value 'ABC123-PERM' \
+  --auth-apikey-in 'header'
+  
+http://localhost:8080/api/parking-stays/vehicles/move
+
+postman request POST 'http://localhost:8080/api/parking-stays/vehicles/move' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-KEY: ABC123-PERM' \
+  --body '{
+    "licensePlate": "anni8787"
+}' \
+  --auth-apikey-key 'X-API-KEY' \
+  --auth-apikey-value 'ABC123-PERM' \
+  --auth-apikey-in 'header'
+  
+ http://localhost:8080/api/parking-stays/vehicles/check-out
+
+postman request POST 'http://localhost:8080/api/parking-stays/vehicles/check-out' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-KEY: ABC123-PERM' \
+  --body '{
+    "licensePlate": "anni8787"
+}' \
+  --auth-apikey-key 'X-API-KEY' \
+  --auth-apikey-value 'ABC123-PERM' \
+  --auth-apikey-in 'header'
+  
+-- db  
+http://localhost:8080/h2-console/
+
+-- swagger
+http://localhost:8080/swagger-ui/index.html
+
+http://localhost:8080/v3/api-docs
+
+

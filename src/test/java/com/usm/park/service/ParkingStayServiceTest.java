@@ -1,10 +1,13 @@
 package com.usm.park.service;
 
-
+import com.usm.park.exception.IntegrationErrorCode;
+import com.usm.park.exception.IntegrationException;
 import com.usm.park.model.ParkingRate;
 import com.usm.park.model.ParkingSpot;
 import com.usm.park.model.ParkingStay;
+import com.usm.park.model.StayMovement;
 import com.usm.park.model.Vehicle;
+import com.usm.park.model.dto.ParkingStayResumeDto;
 import com.usm.park.repository.ParkingStayRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
